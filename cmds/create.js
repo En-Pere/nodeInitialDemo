@@ -13,7 +13,7 @@ const fs = require('fs'); // Necesario para leer Json
 const { create } = require('../src/questions') // Importa las preguntas de creación
 
 // Inicia lectura de Json <--
-let rawtodo = fs.readFileSync('./database/tasks.json'); 
+let rawtodo = fs.readFileSync('../database/tasks.json'); 
 const db = JSON.parse(rawtodo);
 const dbcache = db.tasks 
 //console.table(db.tasks) // Opcional para comprobar
