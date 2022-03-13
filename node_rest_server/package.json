@@ -74,7 +74,8 @@
     "xtend": "^4.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node nivell1/servidor.js",
+    "dev": "nodemon nivell1/servidor js"
   },
   "keywords": [],
   "author": "",
