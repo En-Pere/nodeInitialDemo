@@ -23,7 +23,8 @@ username: xxx
 email: xxx@xxx.com
 
 password: ++++
--Aqui register_new_user.png
+
+![Demo](https://github.com/En-Pere/nodeInitialDemo/blob/4.2_Node_REST_DB_JWT/node_rest_db_jwt/docs/register_new_user.png)
 
 *//Fer login de l'usuari que s'ha creat perquè es retorni un token*
 POST —> http://localhost:8080/api/users/login
