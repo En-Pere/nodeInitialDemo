@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "80000293-86e5-4dfe-a6e7-52df7b89139a",
+		"name": "Game DAUS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all players",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvSWQiOjIsImNyZWF0ZWRBdCI6MTY0NzM1OTI4OCwiZXhwaXJlZEF0IjoxNjQ3Mzc3Mjg4fQ.BLojohLoE2l6a36dtPE_zNWncOhS9LivMpiOsYjCzdk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jocdedaus/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jocdedaus",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update player",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvSWQiOjEsImNyZWF0ZWRBdCI6MTY0NjE2NDcwMiwiZXhwaXJlZEF0IjoxNjQ2MTY1MDAyfQ.Q4rZGHZ1ShdLRY3cvqSSdGLXJseQ9XvmoQGA4XGyDOc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Juanjo\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jocdedaus/players/ester",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jocdedaus",
+						"players",
+						"ester"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create player",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvSWQiOjEsImNyZWF0ZWRBdCI6MTY0NzE2Mzg2NywiZXhwaXJlZEF0IjoxNjQ3MTY0MTY3fQ.Vvs9OQwq5Bhy61-T5yY5YUsWL8jd-Aur06TztZQ6RcQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n  \"name\": \"dani\",\n  \"game\": 734,\n  \"dau1\": 4,\n  \"dau2\": 6\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jocdedaus/players/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jocdedaus",
+						"players",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "un jugador fa jugada",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvSWQiOjEsImNyZWF0ZWRBdCI6MTY0NzE2Mzg2NywiZXhwaXJlZEF0IjoxNjQ3MTY0MTY3fQ.Vvs9OQwq5Bhy61-T5yY5YUsWL8jd-Aur06TztZQ6RcQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n  \"game\": \"734283\",\n  \"dau1\": 5,\n  \"dau2\": 5\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jocdedaus/players/games/dani",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jocdedaus",
+						"players",
+						"games",
+						"dani"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete game",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvSWQiOjEsImNyZWF0ZWRBdCI6MTY0NjE2NDcwMiwiZXhwaXJlZEF0IjoxNjQ2MTY1MDAyfQ.Q4rZGHZ1ShdLRY3cvqSSdGLXJseQ9XvmoQGA4XGyDOc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jocdedaus/players/games/juanjo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jocdedaus",
+						"players",
+						"games",
+						"juanjo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get player games",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvSWQiOjIsImNyZWF0ZWRBdCI6MTY0NzM1OTY1MywiZXhwaXJlZEF0IjoxNjQ3Mzc3NjUzfQ.vqAYhr6hVQzKO5asChD_i-NN0vXWwKP1wHHi4MrlxF8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jocdedaus/players/games/dani",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jocdedaus",
+						"players",
+						"games",
+						"dani"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get loser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvSWQiOjIsImNyZWF0ZWRBdCI6MTY0NzM1OTY1MywiZXhwaXJlZEF0IjoxNjQ3Mzc3NjUzfQ.vqAYhr6hVQzKO5asChD_i-NN0vXWwKP1wHHi4MrlxF8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/jocdedaus/loser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jocdedaus",
+						"loser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get winner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvSWQiOjEsImNyZWF0ZWRBdCI6MTY0NzE2Mzg2NywiZXhwaXJlZEF0IjoxNjQ3MTY0MTY3fQ.Vvs9OQwq5Bhy61-T5yY5YUsWL8jd-Aur06TztZQ6RcQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/jocdedaus/winner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jocdedaus",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ranking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/jocdedaus/ranking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jocdedaus",
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "dummyuser",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "dummyuser@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "peretest8",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "peretest@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

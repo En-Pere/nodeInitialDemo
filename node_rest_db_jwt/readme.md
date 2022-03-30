@@ -2,16 +2,24 @@
 # Sprint 4.
 **Entrega 4.2: Node REST + DB + JWT**
 
+# Crear Base de Dades.
+
+DROP DATABASE IF EXISTS jocdedausdb;
+
+CREATE DATABASE jocdedausdb;
+
+USE jocdedausdb;
+
+# Instalar dependencias:
+
+npm install
+
 # Para iniciar el proyecto:
 
 Iniciar proyecto en desarrollo:
 ```npm run dev```
 Iniciar proyecto en producción:
 ```npm start```
-
-# Instalar dependencias:
-
-npm install
 
 # Funcionalidades:
 **Ejemplos en Postman**
